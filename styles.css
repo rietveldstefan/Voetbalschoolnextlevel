@@ -396,11 +396,11 @@ button {
 
 .hero-title {
   font-family: var(--font-heading);
-  font-size: clamp(3.8rem, 11vw, 9rem);
-  line-height: 0.93;
+  font-size: clamp(2.8rem, 7.5vw, 6.2rem);
+  line-height: 0.95;
   letter-spacing: 0.015em;
-  margin-bottom: 26px;
-  max-width: 680px;
+  margin-bottom: 32px;
+  max-width: 600px;
   text-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
 }
 
@@ -646,7 +646,7 @@ button {
 .trainer-img-wrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 4 / 5;
   overflow: hidden;
   border-radius: var(--radius-lg);
 }
@@ -1482,7 +1482,7 @@ button {
 
   /* Hero */
   .hero-title {
-    font-size: clamp(3rem, 14vw, 5.5rem);
+    font-size: clamp(2.4rem, 11vw, 4.2rem);
   }
 
   /* About */
