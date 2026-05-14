@@ -119,16 +119,9 @@
     });
   }
 
-  /* ===== HERO ACHTERGROND ANIMATIE ===== */
+  /* ===== HERO VIDEO FALLBACK ===== */
   function initHeroBg() {
-    var heroBg = document.querySelector('.hero-bg');
-    if (!heroBg) return;
-    // Kleine vertraging zodat de zoom-animatie zichtbaar is
-    requestAnimationFrame(function () {
-      setTimeout(function () {
-        heroBg.classList.add('loaded');
-      }, 80);
-    });
+    // Video autoplay wordt volledig via HTML-attributen geregeld
   }
 
   /* ===== SCROLL-ANIMATIES (IntersectionObserver) ===== */

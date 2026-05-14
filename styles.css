@@ -333,30 +333,36 @@ button {
   overflow: hidden;
 }
 
-.hero-bg {
+.hero-video {
   position: absolute;
   inset: 0;
-  background-image: url("Next%20Level%20Foto's/2026-03-01%2011.44.38.jpg");
-  background-size: cover;
-  background-position: center 30%;
-  transform: scale(1.06);
-  transition: transform 9s ease-out;
-  will-change: transform;
-}
-
-.hero-bg.loaded {
-  transform: scale(1);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    108deg,
-    rgba(13, 13, 13, 0.93) 0%,
-    rgba(13, 13, 13, 0.72) 45%,
-    rgba(13, 13, 13, 0.38) 100%
-  );
+  z-index: 1;
+  /* Cinematic multi-layer overlay */
+  background:
+    linear-gradient(
+      108deg,
+      rgba(0, 0, 0, 0.82) 0%,
+      rgba(0, 0, 0, 0.52) 42%,
+      rgba(0, 0, 0, 0.22) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.25) 0%,
+      transparent 30%,
+      transparent 70%,
+      rgba(0, 0, 0, 0.55) 100%
+    );
 }
 
 /* Verticale goudlijn links — uit het brandbook */
@@ -372,7 +378,7 @@ button {
 
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -424,7 +430,7 @@ button {
   bottom: 36px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 2;
+  z-index: 3;
 }
 
 .scroll-arrow {
