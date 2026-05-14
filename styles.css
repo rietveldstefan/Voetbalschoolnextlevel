@@ -331,6 +331,7 @@ button {
   display: flex;
   align-items: center;
   overflow: hidden;
+  isolation: isolate;
 }
 
 .hero-video {
@@ -343,6 +344,11 @@ button {
   z-index: 0;
   pointer-events: none;
 }
+
+/* Expliciete stacking voor alles boven de video */
+.hero-overlay  { z-index: 1; }
+.hero-content  { z-index: 2; position: relative; }
+.hero-scroll-hint { z-index: 2; }
 
 .hero-overlay {
   position: absolute;
