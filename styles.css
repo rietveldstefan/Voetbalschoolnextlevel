@@ -118,6 +118,9 @@ button {
   color: var(--gray-light);
   max-width: 480px;
   line-height: 1.7;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .section-header {
