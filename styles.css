@@ -234,9 +234,13 @@ button {
   background: rgba(13, 13, 13, 0.96);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  padding: 14px 0;
+  padding: 10px 0;
   border-bottom-color: rgba(241, 176, 45, 0.15);
   box-shadow: 0 4px 40px rgba(0, 0, 0, 0.6);
+}
+
+#navbar.scrolled .nav-logo img {
+  height: 52px;
 }
 
 .nav-container {
@@ -249,9 +253,9 @@ button {
 }
 
 .nav-logo img {
-  height: 48px;
+  height: 68px;
   width: auto;
-  filter: drop-shadow(0 0 10px rgba(241, 176, 45, 0.4));
+  filter: drop-shadow(0 0 12px rgba(241, 176, 45, 0.5));
   transition: filter 0.3s ease;
 }
 
@@ -611,6 +615,89 @@ button {
   background: var(--black);
   clip-path: polygon(0 0, 100% 100%, 0 100%);
   pointer-events: none;
+}
+
+/* ===== TRAINERS ===== */
+.trainers {
+  background: var(--black);
+  padding: 100px 0 90px;
+  position: relative;
+}
+
+.trainers-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 400px);
+  gap: 40px;
+  justify-content: center;
+}
+
+.trainer-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.trainer-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+}
+
+.trainer-img-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+.trainer-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform 0.55s var(--ease);
+}
+
+.trainer-card:hover .trainer-img-wrapper img {
+  transform: scale(1.06);
+}
+
+.trainer-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 50%,
+    rgba(0, 0, 0, 0.35) 100%
+  );
+  pointer-events: none;
+}
+
+.trainer-name-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--gold);
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.trainer-card:hover .trainer-name-bar {
+  background: var(--gold-light);
+}
+
+.trainer-name-bar span {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  letter-spacing: 0.18em;
+  color: var(--black);
+  font-weight: 700;
 }
 
 /* ===== FOTO CARROUSEL ===== */
@@ -1307,6 +1394,10 @@ button {
     gap: 56px;
   }
 
+  .trainers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .about-image {
     order: -1;
   }
@@ -1366,6 +1457,13 @@ button {
 
   .hamburger {
     display: flex;
+  }
+
+  /* Trainers */
+  .trainers-grid {
+    grid-template-columns: 1fr;
+    max-width: 380px;
+    margin: 0 auto;
   }
 
   /* Pricing */
