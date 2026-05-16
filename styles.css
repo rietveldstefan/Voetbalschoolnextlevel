@@ -1323,11 +1323,11 @@ button {
 
 .form-group input,
 .form-group textarea {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #161616;
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius);
   padding: 13px 16px;
-  color: var(--white);
+  color: #ffffff;
   font-family: var(--font-body);
   font-size: 0.93rem;
   transition: var(--transition);
@@ -1382,15 +1382,13 @@ button {
 }
 
 .form-group input::placeholder,
-.form-group textarea::placeholder,
-.form-group input::-webkit-input-placeholder,
-.form-group textarea::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.45) !important;
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
   opacity: 1;
 }
 
 .form-group select option[disabled] {
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .field-error {
