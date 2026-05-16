@@ -1382,7 +1382,14 @@ button {
 }
 
 .form-group input::placeholder,
-.form-group textarea::placeholder {
+.form-group textarea::placeholder,
+.form-group input::-webkit-input-placeholder,
+.form-group textarea::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.45) !important;
+  opacity: 1;
+}
+
+.form-group select option[disabled] {
   color: rgba(255, 255, 255, 0.45);
 }
 
