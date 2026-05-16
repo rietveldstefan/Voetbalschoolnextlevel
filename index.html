@@ -49,7 +49,7 @@
         <span class="text-gold">NEXT LEVEL.</span>
       </h1>
       <div class="hero-cta">
-        <a href="#prijzen" class="btn btn-primary">BEKIJK CLINICS</a>
+        <a href="#agenda" class="btn btn-primary">BEKIJK CLINICS</a>
         <a href="#over-ons" class="btn btn-outline">OVER ONS</a>
       </div>
     </div>
@@ -318,16 +318,16 @@
         <h2 class="section-title">KOMENDE CLINICS</h2>
       </div>
       <div class="clinic-card-single" data-animate>
-        <div class="clinic-card-left">
-          <span class="clinic-season-tag">ZOMER 2026</span>
+        <div class="clinic-card-img">
+          <img src="Next Level Foto's/2026-03-01 11.44.38.jpg" alt="Zomerkamp training Next Level" loading="lazy">
+        </div>
+        <div class="clinic-card-content">
           <h3 class="clinic-title">ZOMERKAMP</h3>
           <div class="clinic-date-display">
             <span class="clinic-date-nums">27 <span class="clinic-amp">&amp;</span> 28</span>
             <span class="clinic-date-month">JUNI</span>
           </div>
           <p class="clinic-desc">Twee intensieve trainingsdagen in Next Level stijl. Train op jouw niveau, ontmoet gelijkgestemde spelers en beleef een onvergetelijk sportief weekend. Meerdere scouts aanwezig!</p>
-        </div>
-        <div class="clinic-card-right">
           <div class="clinic-meta-list">
             <div class="clinic-meta-item">
               <span class="clinic-meta-icon">⏰</span>
@@ -412,6 +412,20 @@
             <div class="form-group">
               <label for="telefoon">Telefoonnummer</label>
               <input type="tel" id="telefoon" name="telefoon" placeholder="+31 6 00 00 00 00" autocomplete="tel">
+            </div>
+            <div class="form-group">
+              <label for="onderwerp">Waar gaat je bericht over?</label>
+              <select id="onderwerp" name="onderwerp">
+                <option value="" disabled selected>Selecteer een onderwerp</option>
+                <option value="prive">Privé training plannen</option>
+                <option value="duo">Duo training plannen</option>
+                <option value="team">Team trainingspakket</option>
+                <option value="maand">1 maandpakket</option>
+                <option value="clinic">Aanmelden voor een clinic</option>
+                <option value="sponsoring">Sponsoring</option>
+                <option value="algemeen">Algemene vraag</option>
+                <option value="anders">Anders</option>
+              </select>
             </div>
             <div class="form-group">
               <label for="bericht">Bericht <span class="required">*</span></label>
