@@ -1274,6 +1274,16 @@ button {
   color: rgba(255, 255, 255, 0.65);
 }
 
+.contact-link {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contact-link:hover {
+  color: var(--gold);
+}
+
 .contact-social-links {
   display: flex;
   gap: 10px;
