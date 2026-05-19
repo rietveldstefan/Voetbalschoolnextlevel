@@ -1773,6 +1773,16 @@ button {
   transform: scale(1.38);
 }
 
+/* Kaasboerderij logo 20% ingezoomd */
+.sponsor-card img[alt="Kaasboerderij Aan De Linge"] {
+  object-fit: cover;
+  transform: scale(1.2);
+}
+
+.sponsor-item:hover .sponsor-card img[alt="Kaasboerderij Aan De Linge"] {
+  transform: scale(1.28);
+}
+
 /* ===== FOOTER ===== */
 .footer {
   background: #090909;
