@@ -985,8 +985,15 @@ button {
 }
 
 .agenda-centered {
-  max-width: 620px;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 860px;
   margin: 0 auto;
+}
+
+.agenda-centered .agenda-card {
+  flex: 0 0 380px;
 }
 
 .agenda-card {
