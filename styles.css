@@ -489,7 +489,22 @@ button {
   color: rgba(255, 255, 255, 0.68);
   font-size: 0.97rem;
   line-height: 1.85;
-  margin-bottom: 40px;
+  margin-bottom: 28px;
+}
+
+.about-cta-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+
+.btn-about {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  padding: 11px 22px;
 }
 
 .about-features {
