@@ -1194,6 +1194,11 @@ button {
   text-overflow: ellipsis;
 }
 
+.agenda-title-gold {
+  color: var(--gold);
+  font-weight: 700;
+}
+
 .agenda-meta {
   display: flex;
   gap: 14px;
