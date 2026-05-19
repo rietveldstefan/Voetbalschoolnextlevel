@@ -984,6 +984,11 @@ button {
   gap: 14px;
 }
 
+.agenda-centered {
+  max-width: 620px;
+  margin: 0 auto;
+}
+
 .agenda-card {
   display: flex;
   align-items: center;
