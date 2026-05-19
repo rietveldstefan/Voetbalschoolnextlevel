@@ -1735,22 +1735,42 @@ button {
 }
 
 .sponsor-card {
-  width: 180px;
-  height: 90px;
+  width: 200px;
+  height: 100px;
+  background: #ffffff;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 18px 22px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+  transition: var(--transition);
+  overflow: hidden;
 }
 
 .sponsor-card img {
-  width: 180px;
-  height: 90px;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
-  transition: opacity 0.25s var(--ease);
+  transition: var(--transition);
+}
+
+.sponsor-item:hover .sponsor-card {
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 }
 
 .sponsor-item:hover .sponsor-card img {
-  opacity: 0.8;
+  transform: scale(1.06);
+}
+
+/* Voetbalshop logo iets ingezoomd voor leesbaarheid */
+.sponsor-card img[alt="Voetbalshop.nl"] {
+  object-fit: cover;
+  transform: scale(1.3);
+}
+
+.sponsor-item:hover .sponsor-card img[alt="Voetbalshop.nl"] {
+  transform: scale(1.38);
 }
 
 /* ===== FOOTER ===== */
@@ -1954,10 +1974,10 @@ button {
   }
 
   /* Sponsors */
-  .sponsor-card,
-  .sponsor-card img {
-    width: 140px;
-    height: 70px;
+  .sponsor-card {
+    width: 155px;
+    height: 82px;
+    padding: 14px 16px;
   }
 
   /* Hero */
