@@ -494,17 +494,17 @@ button {
 
 .about-cta-row {
   display: flex;
-  gap: 12px;
+  gap: 10px;
   flex-wrap: wrap;
-  margin-bottom: 36px;
+  margin-top: 28px;
 }
 
 .btn-about {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.88rem;
-  padding: 11px 22px;
+  gap: 7px;
+  font-size: 0.82rem;
+  padding: 9px 18px;
 }
 
 .about-features {
