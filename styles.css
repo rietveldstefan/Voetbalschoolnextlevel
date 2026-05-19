@@ -1197,6 +1197,9 @@ button {
 .agenda-title-gold {
   color: var(--gold);
   font-weight: 700;
+  font-size: 1.45rem;
+  letter-spacing: 0.04em;
+  white-space: normal;
 }
 
 .agenda-meta {
