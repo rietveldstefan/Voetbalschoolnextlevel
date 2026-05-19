@@ -257,68 +257,6 @@
     }, { passive: true });
   }
 
-  /* ===== TRAINER MODALS ===== */
-  function initTrainerModals() {
-    var cards = document.querySelectorAll('[data-modal]');
-    if (!cards.length) return;
-
-    function openModal(id) {
-      var modal = document.getElementById(id);
-      if (!modal) return;
-      modal.classList.add('is-open');
-      document.body.style.overflow = 'hidden';
-      // Focus sluiten-knop voor toegankelijkheid
-      var closeBtn = modal.querySelector('.trainer-modal-close');
-      if (closeBtn) closeBtn.focus();
-    }
-
-    function closeModal(modal) {
-      modal.classList.remove('is-open');
-      // Herstel scroll alleen als er geen mobiel menu open is
-      var navMenu = document.getElementById('nav-menu');
-      if (!navMenu || !navMenu.classList.contains('open')) {
-        document.body.style.overflow = '';
-      }
-    }
-
-    function closeAllModals() {
-      document.querySelectorAll('.trainer-modal.is-open').forEach(closeModal);
-    }
-
-    // Klik op trainer-card → modal openen
-    cards.forEach(function (card) {
-      card.addEventListener('click', function () {
-        openModal(card.getAttribute('data-modal'));
-      });
-      // Toetsenbord: Enter of Spatie
-      card.addEventListener('keydown', function (e) {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          openModal(card.getAttribute('data-modal'));
-        }
-      });
-    });
-
-    // Klik op sluitknop
-    document.querySelectorAll('.trainer-modal-close').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        closeModal(btn.closest('.trainer-modal'));
-      });
-    });
-
-    // Klik op overlay (buiten het paneel)
-    document.querySelectorAll('.trainer-modal').forEach(function (modal) {
-      modal.addEventListener('click', function (e) {
-        if (e.target === modal) closeModal(modal);
-      });
-    });
-
-    // Escape toets
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') closeAllModals();
-    });
-  }
-
   /* ===== INITIALISATIE ===== */
   document.addEventListener('DOMContentLoaded', function () {
     initSmoothScroll();
@@ -328,7 +266,6 @@
     initScrollAnimations();
     initForm();
     initCarousel();
-    initTrainerModals();
   });
 
 })();
