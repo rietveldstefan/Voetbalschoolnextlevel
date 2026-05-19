@@ -107,23 +107,25 @@
       </div>
       <div class="trainers-grid" data-animate>
 
-        <div class="trainer-card">
+        <div class="trainer-card" data-modal="modal-justin" role="button" tabindex="0" aria-label="Meer over Justin Rietveld">
           <div class="trainer-img-wrapper">
             <img src="Trainers/Justin Rietveld.jpg" alt="Justin Rietveld" loading="lazy">
             <div class="trainer-overlay"></div>
             <div class="trainer-name-bar">
               <span>JUSTIN RIETVELD</span>
             </div>
+            <div class="trainer-card-hint">LEES MEER</div>
           </div>
         </div>
 
-        <div class="trainer-card">
+        <div class="trainer-card" data-modal="modal-ray" role="button" tabindex="0" aria-label="Meer over Ray Verluis">
           <div class="trainer-img-wrapper">
             <img src="Trainers/Ray Verluis.jpg" alt="Ray Verluis" loading="lazy">
             <div class="trainer-overlay"></div>
             <div class="trainer-name-bar">
               <span>RAY VERLUIS</span>
             </div>
+            <div class="trainer-card-hint">LEES MEER</div>
           </div>
         </div>
 
@@ -489,6 +491,41 @@
       </div>
     </div>
   </footer>
+
+  <!-- ===== TRAINER MODALS ===== -->
+  <div class="trainer-modal" id="modal-justin" role="dialog" aria-modal="true" aria-labelledby="modal-justin-name">
+    <div class="trainer-modal-inner">
+      <button class="trainer-modal-close" aria-label="Sluiten">&times;</button>
+      <div class="trainer-modal-photo">
+        <img src="Trainers/Justin Rietveld.jpg" alt="Justin Rietveld">
+      </div>
+      <div class="trainer-modal-content">
+        <span class="section-tag">HOOFDTRAINER</span>
+        <h2 class="trainer-modal-name" id="modal-justin-name">JUSTIN RIETVELD</h2>
+        <div class="trainer-modal-divider"></div>
+        <p class="trainer-modal-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+        <p class="trainer-modal-bio">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <a href="#contact" class="btn btn-primary trainer-modal-cta">NEEM CONTACT OP</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="trainer-modal" id="modal-ray" role="dialog" aria-modal="true" aria-labelledby="modal-ray-name">
+    <div class="trainer-modal-inner">
+      <button class="trainer-modal-close" aria-label="Sluiten">&times;</button>
+      <div class="trainer-modal-photo">
+        <img src="Trainers/Ray Verluis.jpg" alt="Ray Verluis">
+      </div>
+      <div class="trainer-modal-content">
+        <span class="section-tag">TRAINER</span>
+        <h2 class="trainer-modal-name" id="modal-ray-name">RAY VERLUIS</h2>
+        <div class="trainer-modal-divider"></div>
+        <p class="trainer-modal-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+        <p class="trainer-modal-bio">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <a href="#contact" class="btn btn-primary trainer-modal-cta">NEEM CONTACT OP</a>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
