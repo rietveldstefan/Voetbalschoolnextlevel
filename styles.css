@@ -1204,39 +1204,44 @@ button {
 
 .agenda-card-block {
   flex-direction: column;
-  gap: 20px;
+  align-items: stretch;
+  gap: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 .agenda-card-top {
   display: flex;
-  align-items: flex-start;
-  gap: 22px;
+  align-items: center;
+  gap: 20px;
+  padding: 24px 26px;
 }
 
 .agenda-card-bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 18px;
+  padding: 16px 26px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.2);
   gap: 16px;
 }
 
 .agenda-price-badge {
   font-family: var(--font-heading);
-  font-size: 2rem;
+  font-size: 1.9rem;
   color: var(--gold);
   line-height: 1;
 }
 
 .agenda-price-badge span {
-  font-size: 1.1rem;
-  opacity: 0.7;
+  font-size: 1rem;
+  opacity: 0.65;
 }
 
 .agenda-cta {
-  font-size: 0.82rem;
-  padding: 10px 22px;
+  font-size: 0.8rem;
+  padding: 9px 20px;
   white-space: nowrap;
 }
 
