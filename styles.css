@@ -1239,6 +1239,13 @@ button {
   opacity: 0.65;
 }
 
+.agenda-price-old {
+  font-size: 1.1rem;
+  color: var(--gray-light);
+  text-decoration: line-through;
+  margin-right: 6px;
+}
+
 .agenda-cta {
   font-size: 0.8rem;
   padding: 9px 36px;
