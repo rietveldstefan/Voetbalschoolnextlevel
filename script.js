@@ -205,36 +205,45 @@
       });
 
       if (!valid) {
-        // Focus eerste fout-veld
         var firstError = form.querySelector('.is-error');
         if (firstError) firstError.focus();
         return;
       }
 
-      // Simuleer verzending (geen echte backend)
       submitBtn.textContent = 'VERZENDEN...';
       submitBtn.disabled = true;
 
-      setTimeout(function () {
-        submitBtn.textContent = 'VERZONDEN ✓';
-        submitBtn.style.background = '#4caf50';
-        submitBtn.style.color = '#fff';
-        submitBtn.style.boxShadow = '0 4px 24px rgba(76,175,80,0.35)';
+      fetch('https://formspree.io/f/mwvzybpk', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form)
+      })
+      .then(function (response) {
+        if (response.ok) {
+          submitBtn.textContent = 'VERZONDEN ✓';
+          submitBtn.style.background = '#4caf50';
+          submitBtn.style.color = '#fff';
+          submitBtn.style.boxShadow = '0 4px 24px rgba(76,175,80,0.35)';
+          if (formSuccess) formSuccess.style.display = 'block';
+          form.reset();
 
-        if (formSuccess) formSuccess.style.display = 'block';
-
-        form.reset();
-
-        // Na 5 seconden terugzetten
-        setTimeout(function () {
-          submitBtn.textContent = 'VERSTUUR BERICHT';
+          setTimeout(function () {
+            submitBtn.textContent = 'VERSTUUR BERICHT';
+            submitBtn.disabled = false;
+            submitBtn.style.background = '';
+            submitBtn.style.color = '';
+            submitBtn.style.boxShadow = '';
+            if (formSuccess) formSuccess.style.display = 'none';
+          }, 5000);
+        } else {
+          submitBtn.textContent = 'PROBEER OPNIEUW';
           submitBtn.disabled = false;
-          submitBtn.style.background = '';
-          submitBtn.style.color = '';
-          submitBtn.style.boxShadow = '';
-          if (formSuccess) formSuccess.style.display = 'none';
-        }, 5000);
-      }, 900);
+        }
+      })
+      .catch(function () {
+        submitBtn.textContent = 'PROBEER OPNIEUW';
+        submitBtn.disabled = false;
+      });
     });
   }
 
