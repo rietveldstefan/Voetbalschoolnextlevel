@@ -1240,7 +1240,7 @@ button {
 }
 
 .agenda-price-old {
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   color: var(--gray-light);
   text-decoration: line-through;
   margin-right: 6px;
