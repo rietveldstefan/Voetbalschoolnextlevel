@@ -2053,6 +2053,7 @@ button {
     object-fit: contain;
     object-position: center center;
     background-color: #0D0D0D;
+    transform: scale(0.65);
   }
 
   /* About */
