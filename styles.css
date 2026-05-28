@@ -2075,6 +2075,7 @@ button {
   .hero-video {
     object-fit: cover;
     object-position: center center;
+    transform: scale(0.88);
   }
 
   /* About */
