@@ -2064,6 +2064,10 @@ button {
   }
 
   /* Hero */
+  .hero {
+    min-height: 100dvh;
+  }
+
   .hero-title {
     font-size: clamp(2.4rem, 11vw, 4.2rem);
   }
