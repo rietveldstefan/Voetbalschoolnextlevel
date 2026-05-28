@@ -2060,8 +2060,9 @@ button {
 
   /* Pricing */
   .pricing-grid {
-    grid-template-columns: 1fr;
-    max-width: 420px;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+    gap: 14px;
     margin: 0 auto;
   }
 
@@ -2171,7 +2172,29 @@ button {
   }
 
   .pricing-card {
-    padding: 30px 20px;
+    padding: 20px 14px;
+    gap: 16px;
+  }
+
+  .pricing-name {
+    font-size: 1rem;
+  }
+
+  .pricing-price {
+    font-size: 2.4rem;
+  }
+
+  .pricing-features {
+    font-size: 0.78rem;
+  }
+
+  .pricing-renewal-price {
+    font-size: 1.3rem;
+  }
+
+  .btn-block {
+    font-size: 0.78rem;
+    padding: 10px 12px;
   }
 
   .agenda-card {
