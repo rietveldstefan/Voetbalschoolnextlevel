@@ -2049,6 +2049,15 @@ button {
     margin: 0 auto;
   }
 
+  .trainer-name-bar {
+    padding: 8px 10px;
+  }
+
+  .trainer-name-bar span {
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+  }
+
   /* Pricing */
   .pricing-grid {
     grid-template-columns: 1fr;
