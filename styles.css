@@ -910,9 +910,9 @@ button {
 
 .price-currency {
   font-size: 2.1rem;
-  vertical-align: super;
-  line-height: 0;
-  margin-right: 1px;
+  vertical-align: top;
+  line-height: 1;
+  margin-right: 2px;
 }
 
 .price-suffix {
