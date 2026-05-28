@@ -2050,7 +2050,9 @@ button {
   }
 
   .hero-video {
-    object-position: 70% center;
+    object-fit: contain;
+    object-position: center center;
+    background-color: #0D0D0D;
   }
 
   /* About */
