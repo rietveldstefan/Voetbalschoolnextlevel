@@ -83,13 +83,6 @@ button {
 
 .text-gold { color: var(--gold); }
 
-.about-text .text-gold {
-  text-decoration: underline;
-  text-decoration-color: var(--gold);
-  text-decoration-thickness: 2px;
-  text-underline-offset: 4px;
-}
-
 .section-tag {
   display: inline-flex;
   align-items: center;
