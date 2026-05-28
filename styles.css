@@ -1242,8 +1242,20 @@ button {
 .agenda-price-old {
   font-size: 1.4rem;
   color: var(--gray-light);
-  text-decoration: line-through;
+  text-decoration: none;
   margin-right: 6px;
+  position: relative;
+}
+
+.agenda-price-old::after {
+  content: '';
+  position: absolute;
+  left: -4%;
+  top: 50%;
+  width: 108%;
+  height: 1px;
+  background: var(--gray-light);
+  transform: rotate(-18deg);
 }
 
 .agenda-cta {
