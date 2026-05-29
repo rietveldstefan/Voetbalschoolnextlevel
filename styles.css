@@ -906,15 +906,14 @@ button {
   color: var(--gold);
   line-height: 1;
   margin-bottom: 5px;
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
 }
 
 .price-currency {
-  font-size: 2.1rem;
-  vertical-align: baseline;
-  line-height: 1;
-  margin-right: 2px;
-  position: relative;
-  top: -0.5rem;
+  font-size: 2rem;
+  line-height: 1.15;
 }
 
 .price-suffix {
