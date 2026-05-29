@@ -908,6 +908,7 @@ button {
   margin-bottom: 5px;
   display: flex;
   align-items: flex-end;
+  justify-content: center;
   gap: 2px;
 }
 
