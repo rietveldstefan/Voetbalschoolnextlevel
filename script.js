@@ -121,7 +121,20 @@
 
   /* ===== HERO VIDEO FALLBACK ===== */
   function initHeroBg() {
-    // Video autoplay wordt volledig via HTML-attributen geregeld
+    var video = document.querySelector('.hero-video');
+    if (!video) return;
+
+    // Probeer video af te spelen
+    var playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(function () {
+        // Autoplay geblokkeerd — probeer opnieuw bij eerste aanraking
+        document.addEventListener('touchstart', function tryPlay() {
+          video.play();
+          document.removeEventListener('touchstart', tryPlay);
+        }, { once: true });
+      });
+    }
   }
 
   /* ===== SCROLL-ANIMATIES (IntersectionObserver) ===== */
