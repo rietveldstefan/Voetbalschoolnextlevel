@@ -213,7 +213,7 @@
       submitBtn.textContent = 'VERZENDEN...';
       submitBtn.disabled = true;
 
-      fetch('https://formspree.io/f/mwvzybpk', {
+      fetch('https://formspree.io/f/mzdwlqnr', {
         method: 'POST',
         headers: { 'Accept': 'application/json' },
         body: new FormData(form)
